@@ -1,0 +1,1 @@
+export default SOME_USER_ACTION = "SOME_USER_ACTION"
