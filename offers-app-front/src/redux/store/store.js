@@ -1,7 +1,8 @@
 import { createStore, compose, applyMiddleware } from 'redux'
 import createSagaMiddleware from "redux-saga"
 import rootReducer from "../reducers/rootReducer"
-import { watcher_GET_ALL_POST } from "../saga/rootSaga"
+//import { watcher_GET_ALL_POST } from "../saga/rootSaga"
+import rootSaga from "../saga"
 
 const initialState = {    
     //users:[],
@@ -19,6 +20,6 @@ const store = createStore(
     )
 )
 
-sagaMiddleware.run(watcher_GET_ALL_POST)
+sagaMiddleware.run(rootSaga)
 
 export default store

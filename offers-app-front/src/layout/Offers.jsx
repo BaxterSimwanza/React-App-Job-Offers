@@ -23,8 +23,7 @@ const mapDispatchToProps = (dispatch)=>{
 }
 
 const mapStateToProps = (state)=>{
-  console.log("The state is ", state)
-  return state.posts
+  return state
 }
 
 export default connect (mapStateToProps, mapDispatchToProps)(Offers)
