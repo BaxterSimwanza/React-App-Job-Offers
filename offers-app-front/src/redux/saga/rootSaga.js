@@ -4,7 +4,7 @@ import Axios from "axios"
 
 function* worker_GET_ALL_POST(action){
     let result = yield call(
-        Axios.get("http://localhost:5000/posts")
+        Axios.get("http://localhost:5000/posts").then((res)=>console.log(res))
     )
     yield put({ type: "GET_ALL_POST_ASYNC", payload : result })
 }

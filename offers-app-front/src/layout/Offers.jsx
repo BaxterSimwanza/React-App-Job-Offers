@@ -6,7 +6,8 @@ function Offers(props) {
   //const [ offers, setOffers ] = useState([])
 
   useEffect(()=>{
-    console.log(props)
+    props.getAllPosts()
+    console.log("Renderer ", props)
   })
 
   return (
@@ -16,8 +17,15 @@ function Offers(props) {
   );
 }
 
+const mapDispatchToProps = (dispatch)=>{
+ return{
+  getAllPosts : () => dispatch({type: "GET_ALL_POST"})
+ }
+}
+
 const mapStateToProps = (state)=>{
+  console.log("The state is ", state)
   return state.posts
 }
 
-export default connect (mapStateToProps)(Offers)
+export default connect (mapStateToProps, mapDispatchToProps)(Offers)
