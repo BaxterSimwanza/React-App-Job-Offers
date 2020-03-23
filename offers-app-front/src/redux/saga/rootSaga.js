@@ -1,14 +1,14 @@
-import { takeEvery,call, put } from "redux-saga/effects"
-import postsActions from "../actions/postsActions"
+import { takeEvery, call, put } from "redux-saga/effects"
+import {GET_ALL_POSTS} from "../actions/postsActions"
 import Axios from "axios"
 
 function* worker_GET_ALL_POST(action){
     let result = yield call(
         Axios.get("http://localhost:5000/posts")
     )
-    yield put(actionToDispatch(result))
+    yield put({ type: "GET_ALL_POST_ASYNC", payload : result })
 }
 
-function* watcher_GET_ALL_POST(){
-    yield takeEvery(postsActions.GET_ALL_POSTS, worker_GET_ALL_POST)
+export function* watcher_GET_ALL_POST(){
+    yield takeEvery(GET_ALL_POSTS, worker_GET_ALL_POST)
 }

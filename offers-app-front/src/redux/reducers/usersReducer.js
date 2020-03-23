@@ -1,4 +1,4 @@
-import {GET_ALL_USERS} from "../actions/usersAction"
+/*import {GET_ALL_USERS} from "../actions/usersAction"
 
 export default function usersReducer(state, action){
     switch(action.type){
@@ -10,4 +10,4 @@ export default function usersReducer(state, action){
         default : 
             return state
     }
-}
+}*/
