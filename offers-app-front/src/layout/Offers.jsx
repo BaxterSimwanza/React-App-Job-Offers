@@ -7,7 +7,6 @@ function Offers(props) {
 
   useEffect(()=>{
     props.getAllPosts()
-    console.log("Renderer ", props)
   })
 
   return (

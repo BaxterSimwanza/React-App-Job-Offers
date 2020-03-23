@@ -4,7 +4,7 @@ import rootReducer from "../reducers/rootReducer"
 import { watcher_GET_ALL_POST } from "../saga/rootSaga"
 
 const initialState = {    
-    users:[],
+    //users:[],
     posts:[]
 }
 
