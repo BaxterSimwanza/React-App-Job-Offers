@@ -4,10 +4,7 @@ import rootReducer from "../reducers/rootReducer"
 //import { watcher_GET_ALL_POST } from "../saga/rootSaga"
 import rootSaga from "../saga"
 
-const initialState = {    
-    //users:[],
-    posts:[]
-}
+const initialState = { }
 
 const sagaMiddleware = createSagaMiddleware()
 
