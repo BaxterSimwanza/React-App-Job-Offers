@@ -1,6 +1,6 @@
 import React from "react";
-import Offers from "./layout/Offers";
 import Header from "./layout/Header";
+import Body from "./layout/Body";
 import "./App.css";
 import { BrowserRouter as Router } from "react-router-dom";
 
@@ -8,7 +8,7 @@ function App() {
   return (
     <Router>
       <Header />
-      <Offers />
+      <Body />
     </Router>
   );
 }
